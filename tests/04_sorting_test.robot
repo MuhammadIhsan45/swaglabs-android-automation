@@ -6,8 +6,8 @@ Test Teardown     Stop App
 
 *** Test Cases ***
 
-# TC-01: Validasi Integritas Data (Nama & Harga)
-TC01 Verify Product Name and Price Consistency
+# TC-16: Validasi Integritas Data (Nama & Harga)
+TC16 Verify Product Name and Price Consistency
     [Documentation]    Memastikan Nama & Harga di Dashboard SAMA dengan di Detail Page
     Login With Credentials    standard_user    secret_sauce
     Verify Login Result       PRODUCTS
@@ -20,8 +20,8 @@ TC01 Verify Product Name and Price Consistency
     
     Verify Detail Page Data matches List Data    ${list_name}    ${list_price}
 
-# TC-02: Validasi Elemen UI (Gambar & Deskripsi)
-TC02 Verify Product Image and Description Exist
+# TC-17: Validasi Elemen UI (Gambar & Deskripsi)
+TC17 Verify Product Image and Description Exist
     [Documentation]    Memastikan halaman detail tidak error (Gambar muncul, Deskripsi ada)
     Login With Credentials    standard_user    secret_sauce
     Verify Login Result       PRODUCTS
@@ -29,8 +29,8 @@ TC02 Verify Product Image and Description Exist
     Open First Product Detail
     Verify Detail Page Elements Exist
 
-# TC-03: User Bisa Add to Cart dari Halaman Detail
-TC03 User Should Be Able To Add To Cart From Detail Page
+# TC-18: User Bisa Add to Cart dari Halaman Detail
+TC18 User Should Be Able To Add To Cart From Detail Page
     [Documentation]    Fungsionalitas tombol Add to Cart di dalam halaman detail
     Login With Credentials    standard_user    secret_sauce
     Verify Login Result       PRODUCTS
@@ -42,8 +42,8 @@ TC03 User Should Be Able To Add To Cart From Detail Page
     # Validasi Badge Cart jadi "1"
     Verify Cart Badge Shows    1
 
-# TC-04: User Bisa Remove dari Halaman Detail
-TC04 User Should Be Able To Remove From Detail Page
+# TC-19: User Bisa Remove dari Halaman Detail
+TC19 User Should Be Able To Remove From Detail Page
     [Documentation]    Memastikan toggle tombol Add/Remove berfungsi
     Login With Credentials    standard_user    secret_sauce
     Verify Login Result       PRODUCTS
@@ -58,8 +58,8 @@ TC04 User Should Be Able To Remove From Detail Page
     Remove Product From Detail Page
     Verify Cart Badge Is Hidden
 
-# TC-05: Navigasi Tombol Back
-TC05 User Should Be Able To Navigate Back To List
+# TC-20: Navigasi Tombol Back
+TC20 User Should Be Able To Navigate Back To List
     [Documentation]    Memastikan tombol 'Back to Products' berfungsi
     Login With Credentials    standard_user    secret_sauce
     Verify Login Result       PRODUCTS

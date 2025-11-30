@@ -6,8 +6,8 @@ Test Teardown     Stop App
 
 *** Test Cases ***
 
-# TC-01: Checkout Sukses dengan 1 Barang (Happy Path Utama)
-TC01 Successful Checkout Single Item
+# TC-11: Checkout Sukses dengan 1 Barang (Happy Path Utama)
+TC11 Successful Checkout Single Item
     [Documentation]    User membeli 1 barang (Backpack) sampai sukses
     Login With Credentials    standard_user    secret_sauce
     Verify Login Result       PRODUCTS
@@ -24,8 +24,8 @@ TC01 Successful Checkout Single Item
     Click Finish Button
     Verify Checkout Completed
 
-# TC-02: Checkout Sukses dengan 2 Barang (Multiple Items)
-TC02 Successful Checkout Multiple Items
+# TC-12: Checkout Sukses dengan 2 Barang (Multiple Items)
+TC12 Successful Checkout Multiple Items
     [Documentation]    Memastikan sistem bisa menghandle checkout lebih dari 1 barang
     Login With Credentials    standard_user    secret_sauce
     Verify Login Result       PRODUCTS
@@ -38,8 +38,8 @@ TC02 Successful Checkout Multiple Items
     Click Finish Button
     Verify Checkout Completed
 
-# TC-03: Validasi Form Kosong (Negative Test)
-TC03 Checkout Fails With Empty Fields
+# TC-13: Validasi Form Kosong (Negative Test)
+TC13 Checkout Fails With Empty Fields
     [Documentation]    User tidak boleh lanjut jika data pengiriman kosong
     Login With Credentials    standard_user    secret_sauce
     Verify Login Result       PRODUCTS
@@ -53,8 +53,8 @@ TC03 Checkout Fails With Empty Fields
     # Validasi Error Muncul
     Verify Checkout Error    First Name is required
 
-# TC-04: User Membatalkan Checkout (Cancellation Flow)
-TC04 User Cancels Checkout In Overview
+# TC-14: User Membatalkan Checkout (Cancellation Flow)
+TC14 User Cancels Checkout In Overview
     [Documentation]    User berubah pikiran di halaman konfirmasi terakhir dan menekan Cancel
     Login With Credentials    standard_user    secret_sauce
     Verify Login Result       PRODUCTS
@@ -69,8 +69,8 @@ TC04 User Cancels Checkout In Overview
     # Validasi: User harusnya kembali ke halaman "PRODUCTS" / Home
     Validate Login Success    PRODUCTS
 
-# TC-05: Validasi Ringkasan Pembayaran (Data Integrity)
-TC05 Verify Payment Summary Exists
+# TC-15: Validasi Ringkasan Pembayaran (Data Integrity)
+TC15 Verify Payment Summary Exists
     [Documentation]    Memastikan label Total Harga muncul sebelum user menekan Finish
     Login With Credentials    standard_user    secret_sauce
     Verify Login Result       PRODUCTS
