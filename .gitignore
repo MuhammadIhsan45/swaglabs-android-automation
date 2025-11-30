@@ -1,0 +1,17 @@
+# Robot Framework Results
+results/
+log.html
+report.html
+output.xml
+*.png
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# VS Code Settings
+.vscode/
+
+# System Files
+.DS_Store
+Thumbs.db
